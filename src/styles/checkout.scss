@@ -1,0 +1,50 @@
+#checkout {
+    padding: 15px 0;
+    table {
+        min-width: 100%;
+        tr {
+            border-bottom: 1px solid #ebebeb;
+            td {
+                padding: 20px 0;
+                font-size: 120%;
+            }
+        }
+        thead {
+            border-top: 1px solid #ebebeb;
+        }
+        tfoot {
+            tr {
+                border: none;
+                td {
+                    font-size: 150%;
+                }
+            }
+        }
+    }
+    tr > td + td {
+        text-align: center;
+    }
+    td {
+        select {
+            width: 50px;
+            text-align: center;
+            color: #868686;
+            border: 1px solid #ebebeb;
+            box-shadow: none !important;
+            &:focus,
+            &:focus-visible {
+                border-color: #b86d07;
+                box-shadow: 0 0 2px 0 #b86d07;
+            }
+        }
+    }
+}
+
+
+@media screen and (max-width: 767px) {
+    #checkout {
+        td.hide-on-small {
+            display: none ;
+        }
+    }
+}

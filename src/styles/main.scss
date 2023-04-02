@@ -1,7 +1,11 @@
 @import "./variable";
 @import "./font.scss";
 @import "./custom.scss";
-
+@import "./product.scss";
+@import "./checkout.scss";
+@import "./payment.scss";
+@import "./search.scss";
+@import "./contact.scss";
 nav {
     border-bottom: 3px solid #eef0ea;
     background-color: #fff;
@@ -274,61 +278,6 @@ section.features {
 // Start most solid 
 section.most-solid {
     overflow: hidden;
-    .carousel-inner {
-        .carousel-item {
-            .card {
-                position: relative;
-                padding: 8px;
-                border: 2px solid #eef0ea;
-                margin-bottom: 20px;
-                transition: all 0.3s ease;
-                cursor: pointer;
-                .category {
-                    display: flex;
-                    justify-content: space-between;
-                    h5 {
-                        font-size: 15px;
-                        color: #000;
-                    }
-                }
-                .overlay {
-                    position: absolute;
-                    top: 8px;
-                    left: 8px;
-                    width: calc(100% - 16px);
-                    height: 67%;
-                    background-color: rgba(83,204,215,.5);
-                    display: flex;
-                    align-items: center;
-                    justify-content: center;
-                    opacity: 0;
-                    transition: all 0.3s ease;
-                    button {
-                        background-color: #fff;
-                        color: #53CCD7;
-                        font-weight: bold;
-                        &:hover {
-                            background-color: #d4d4d4;
-                            border: 1px solid #8c8c8c;
-                            color: #000;
-                        }
-                    }
-                }
-                &:hover {
-                    border-color: #53ccd7;
-                }
-                .image:hover+.overlay,
-                .overlay:hover {
-                    opacity: 1;
-                }
-                .sale {
-                    top: 15px;
-                    left: 20px;
-                    padding: 3px 8px;
-                }
-            }
-        }
-    }
     .carousel-indicators {
         margin-bottom: -35px;
         [data-bs-target] {
@@ -337,28 +286,6 @@ section.most-solid {
             background-color: #dbdbdb;
             &.active {
                 background-color: #565656;
-            }
-        }
-    }
-    #carousel-most-solid-alternative {
-        .carousel-item {
-            .card {
-                padding-bottom: 50px;
-                .image {
-                    height: 250px;
-                    width: 100%;
-                    max-width: 250px;
-                    margin: auto;
-                }
-                .add-to-chart-btn {
-                    position: absolute;
-                    bottom: 15px;
-                    left: 15px;
-                    &:hover, &:active, &:focus, &:active:focus, &:active:hover {
-                        color: inherit;
-                        border: inherit;
-                    }
-                }
             }
         }
     }

@@ -1,0 +1,22 @@
+#map {
+    padding: 0;
+}
+#contact-option {
+    margin-bottom: 25px;
+    h4 {
+        max-width: 100% !important;
+        width: 100%;
+        font-size: 18px;
+    }
+    #contact-info > div {
+        margin-bottom: 25px;
+        svg {
+            margin-left: 15px;
+            color: #f3af41;
+            font-size: 18px;
+        }
+    }
+    textarea {
+        height: 125px !important;
+    }
+}

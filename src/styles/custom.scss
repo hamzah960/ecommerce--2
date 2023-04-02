@@ -16,10 +16,10 @@ a {
     border-color: #f8ad47;
     color: #000;
     border-radius: 2px;
-    &.focus, &:focus, &:hover {
-        color: #000;
-        background-color: #f79d22;
-        border-color: #f69716;
+    &:focus-visible, &.active, &:focus, &:hover {
+        color: #000 !important;
+        background-color: #f79d22 !important;
+        border-color: #f69716 !important;
     }
 }
 .custom-btn-primary {
@@ -41,6 +41,80 @@ a {
 .price {
     color: #53ccd7;
 }
+.card {
+    position: relative;
+    padding: 8px;
+    border: 2px solid #eef0ea;
+    margin-bottom: 20px;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    .category {
+        display: flex;
+        justify-content: space-between;
+        h5 {
+            font-size: 15px;
+            color: #000;
+        }
+    }
+    .overlay {
+        position: absolute;
+        top: 8px;
+        left: 8px;
+        width: calc(100% - 16px);
+        height: 67%;
+        background-color: rgba(83,204,215,.5);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        opacity: 0;
+        transition: all 0.3s ease;
+        button {
+            background-color: #fff;
+            color: #53CCD7;
+            font-weight: bold;
+            &:hover {
+                background-color: #d4d4d4;
+                border: 1px solid #8c8c8c;
+                color: #000;
+            }
+        }
+    }
+    &:hover {
+        border-color: #53ccd7;
+    }
+    .image:hover+.overlay,
+    .overlay:hover {
+        opacity: 1;
+    }
+    .sale {
+        top: 15px;
+        left: 20px;
+        padding: 3px 8px;
+    }
+}
+@media screen and (max-width: 767px) {
+    .card {
+        padding-bottom: 50px;
+        .image {
+            height: 250px;
+            width: 100%;
+            max-width: 250px;
+            margin: auto;
+        }
+        .add-to-chart-btn {
+            position: absolute;
+            bottom: 15px;
+            left: 15px;
+            &:hover, &:active, &:focus, &:active:focus, &:active:hover {
+                color: inherit;
+                border: inherit;
+            }
+        }
+        .overlay {
+            display: none;
+        }
+    }
+}
 .rating {
     .fa-star {
         color: gold;
@@ -61,5 +135,73 @@ a {
 @media screen and (max-width: 767px){
     svg {
         visibility: visible !important;
+    }
+}
+
+ol.breadcrumb {
+    padding: 25px 0;
+    .breadcrumb-item {
+        a {
+            color: #555;
+            &:hover {
+                color: #f8ad47;
+            }
+        }
+        &.active {
+            color: #bfbfbf;
+        }
+    }
+}
+
+.borders-between {
+    &> div  {
+        color: #000;
+        padding-bottom: 20px;
+    }
+    & > div + div {
+        padding-top: 15px;
+        border-top: 1px solid #ebebeb;
+    }
+}
+
+.heading-with-border-bottom {
+    border-bottom: 2px solid #ebebeb;
+    padding-bottom: 15px;
+    max-width: fit-content;
+    display: inline-block;
+    margin-bottom: 25px;
+}
+
+.custom-text-muted {
+    color: #c3c2c3;
+}
+
+.custom-btn-danger {
+    color: #ff3956;
+    border-color: #ff3956;
+    border-radius: 3px;
+    &:active, &:active:focus, &:active:hover, &:focus, &:hover {
+        color: #b9001b;
+        border-color: #b9001b;
+        background-color: transparent;
+    }
+}
+
+.form-group {
+    margin-bottom: 20px;
+    .custom-form-control {
+        border-width: 2px;
+        border-radius: 3px;
+        font-size: 18px;
+        color: #868686;
+        text-align: right;
+        &:focus {
+            border-color: #b86d07;
+            box-shadow: 0 0 2px 0 #b86d07;
+        }
+    }
+    label {
+        font-weight: bold;
+        color: #000;
     }
 }

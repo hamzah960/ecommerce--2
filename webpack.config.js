@@ -5,10 +5,15 @@ const path = require('path');
 const { postcss } = require('autoprefixer');
 
 module.exports = {
-    entry: path.resolve(__dirname, './src/index.js'),
+    entry: {
+        'js/app': './src/index.js',
+        'js/checkout': './src/js/checkout.js',
+        'js/payment': './src/js/payment.js',
+    },    
     output: {
+        publicPath: '/',
         path: path.resolve(__dirname, 'dist'),
-        filename: 'main.js',
+        filename: '[name].js',
         // assetModuleFilename: 'images/[name].[ext]',
     },
 
@@ -90,7 +95,32 @@ module.exports = {
         new HtmlWebpackPlugin({
             filename: 'index.html',
             template: './src/index.html',
+            chunks:['js/app'],
+        }),
+        new HtmlWebpackPlugin({
+            filename: 'product.html',
+            template: './src/product.html',
+            chunks:['js/app'],
+        }),
+        new HtmlWebpackPlugin({
+            filename: 'checkout.html',
+            template: './src/checkout.html',
+            chunks:['js/app', 'js/checkout'],
+        }),
+        new HtmlWebpackPlugin({
+            filename: 'payment.html',
+            template: './src/payment.html',
+            chunks:['js/app', 'js/checkout', 'js/payment'],
+        }),
+        new HtmlWebpackPlugin({
+            filename: 'search.html',
+            template: './src/search.html',
+            chunks:['js/app'],
+        }),
+        new HtmlWebpackPlugin({
+            filename: 'contact.html',
+            template: './src/contact.html',
+            chunks:['js/app'],
         }),
     ],
-
 }

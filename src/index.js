@@ -2,8 +2,8 @@ import 'bootstrap/dist/css/bootstrap.rtl.min.css';
 import './styles/main.scss';
 import * as bootstrap from 'bootstrap';
 import '@fortawesome/fontawesome-free/js/all.min';
+import { nodeName } from 'jquery';
 // import 'bootstrap/dist/js/bootstrap.min.js';
-// import 'jquery/dist/jquery.min';
 // import '@popperjs/core';
 
 // config tooltip bootstrap
@@ -27,3 +27,5 @@ mybtn.forEach(function (el) {
 const date = new Date();
 document.getElementById('copyright').innerHTML = date.getFullYear();
 //************************ */
+
+

@@ -1,0 +1,96 @@
+nav.breadcrumb {
+    border: none;
+}
+
+#product-carousel {
+    .carousel-indicators {
+        bottom: -55px;
+        button {
+            text-indent: 0;
+            width: 75px;
+            height: 75px;
+            opacity: 1 !important;
+            border: 2px solid #dddddb;
+            &.active {
+                border-color: #f8ad47;
+            }
+        }
+    }
+}
+
+#form-product-selection {
+    .product-title {
+        color: #a9a9a9;
+    }
+    .price {
+        font-size: 30px;
+    }
+    .size-and-color {
+        input {
+            display: none;
+        }
+        label {
+            height: 23px;
+            width: 23px;
+            display: inline-block;
+            margin: 3px 3px 9px;
+            border: 1px solid #ebebeb;
+        }
+        .size label {
+            color: #c2c2c2;
+            text-align: center;
+            font-weight: bold;
+        }
+        #small:checked ~ label[for="small"],
+        #medium:checked ~ label[for="medium"],
+        #large:checked ~ label[for="large"],
+        #x-large:checked ~ label[for="x-large"] {
+            color: #f8ad47;
+            border-color: #f8ad47;
+        } 
+        #orange:checked ~ label[for="orange"],
+        #red:checked ~ label[for="red"],
+        #purple:checked ~ label[for="purple"],
+        #blue:checked ~ label[for="blue"] {
+            border-color: #fff;
+            outline: 1px solid #000;
+        }
+    }
+    .product-quantity {
+        select {
+            padding: 2px 25px;
+            &:focus {
+                border-color: #b86f07;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 991px) {
+    #form-product-selection {
+        .size-and-color {
+            label {
+                width: 40px;
+                height: 40px;
+                font-size: 20px;
+                line-height: 40px;
+                margin: 10px;
+            }
+        }
+    }
+}
+
+
+.media {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    img {
+        width: 80px;
+        height: 80px;
+        border: 1px solid #dfdfdf;
+    }
+    h4 {
+        font-size: 18px;
+    }
+}
